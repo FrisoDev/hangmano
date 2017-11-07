@@ -6,7 +6,7 @@ import './Title.css'
 class Title extends PureComponent {
   render() {
     return (
-      <div class="title">
+      <div className="title">
       <h1>Hangman</h1>
       </div>
     )

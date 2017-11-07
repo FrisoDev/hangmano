@@ -10,7 +10,7 @@ export class StartButton extends PureComponent {
 
     return (
       <button className="start" onClick= { this.props.guess }>
-        Start
+        Start Game
       </button>
     )
   }
