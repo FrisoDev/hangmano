@@ -1,12 +1,2 @@
-.logo {
-  height: 130px;
-  width: 120px;
-  margin-left: 100px;
-  margin-right: 20px; }
-
-.logo2 {
-  height: 130px;
-  width: 120px; }
-
-.hangman {
-  margin-right: 30px; }
+.Title {
+  text-align: center; }

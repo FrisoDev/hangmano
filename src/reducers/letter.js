@@ -1,4 +1,4 @@
-import { ADD_LETTER } from '../actions'
+import { GUESS } from '../actions/guess'
 
   const words = ['duck', 'window', 'watermelon', 'around', 'scientist', 'table', 'candle',
     'bottle', 'beer', 'ignore', 'random', 'juicy', 'rhythm', 'vodka', 'zombie'];
@@ -23,7 +23,7 @@ import { ADD_LETTER } from '../actions'
       return dashes.join(" ");
     }
 
-    function isWinner(word, guesses) {
+    function win(word, guesses) {
       var winner = showGuess(word, guesses).replace(/ /g,'');
       return winner === word;
     }
@@ -31,13 +31,13 @@ import { ADD_LETTER } from '../actions'
     function next(word, guesses) {
       if (wrongGuessCount(word, guesses) === 6)
         return result = word
-      if (isWinner(word, guesses)) return result = "You Won!!!!";
+      if (win(word, guesses)) return result = "Winner winner";
         result = showGuess(word, guesses) ;
     }
 
 export default (state = result, { type, payload } = {}) => {
   switch(type) {
-      case ADD_LETTER :
+      case GUESS :
       guesses.push(payload)
       next(word, guesses)
       return [result, wrongGuessCount(word, guesses)]

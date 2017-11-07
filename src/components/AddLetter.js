@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import  addLetter  from '../actions'
+import  guess  from '../actions/guess'
 import './AddLetter.css'
 
 
@@ -15,7 +15,7 @@ let AddLetter = ({ dispatch }) => {
           if (!input.value.trim()) {
             return
           }
-          dispatch(addLetter(input.value))
+          dispatch(guess(input.value))
           input.value = ''
         }}
         >
@@ -32,6 +32,6 @@ let AddLetter = ({ dispatch }) => {
   )
 }
 
-const mapStateToProps = ({ letter }) => ({ letter})
+const mapStateToProps = ({ guess }) => ({ guess})
 
 export default connect(mapStateToProps)(AddLetter)

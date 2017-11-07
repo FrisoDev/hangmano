@@ -3,15 +3,15 @@ import Title from './Title'
 import StartButton from './StartButton'
 import './Hangman.css'
 import { connect } from 'react-redux'
-import Man from '../images/man.jpg'
-import Man1 from '../images/man1.jpg'
-import Man2 from '../images/man2.jpg'
-import Man3 from '../images/man3.jpg'
-import Man4 from '../images/man4.jpg'
+// import Man from '../images/man.jpg'
+// import Man1 from '../images/man1.jpg'
+// import Man2 from '../images/man2.jpg'
+// import Man3 from '../images/man3.jpg'
+// import Man4 from '../images/man4.jpg'
 
 export class Hangman extends PureComponent {
   render() {
-    function refreshPage(){
+    function reFresh(){
     window.location.reload();
   }
     return (
@@ -21,29 +21,18 @@ export class Hangman extends PureComponent {
         </header>
 
         <main>
-          { this.props.letter[1] > 1 && this.props.letter[0] !== "You Won!!!!" ?
-            <img className="man1" alt="hangman" src={Man1} /> : null }
-          { this.props.letter[1] > 2 && this.props.letter[0] !== "You Won!!!!" ?
-            <img className="man2" alt="hangman" src={Man2} /> : null }
-          { this.props.letter[1] > 3 && this.props.letter[0] !== "You Won!!!!" ?
-            <img className="man3" alt="hangman" src={Man3} /> : null }
-          { this.props.letter[1] > 4 && this.props.letter[0] !== "You Won!!!!" ?
-            <img className="man4 "alt="hangman" src={Man4} /> : null }
-          { this.props.letter[1] > 5 ?
-            <img className="man" alt="hangman" src={Man} /> : null }
-          <h1 className="word">{ this.props.letter[0] }</h1>
           <StartButton />
-          {this.props.letter[0] === "You Won!!!!" &&
-              <button className="newgame" onClick={refreshPage}>
+          {this.props.letter[0] === "Winnar" &&
+              <button className="newgame" onClick={reFreshPage}>
                 New Game
               </button>
             }
           {this.props.letter[1] > 5 &&
-              <button className="newgame" onClick={refreshPage}>
+              <button className="newgame" onClick={reFreshPage}>
                 New Game
               </button>
             }
-            {this.props.letter[1] > 6 ? refreshPage() : null  }
+            {this.props.letter[1] > 6 ? reFresh() : null  }
         </main>
       </div>
     )
