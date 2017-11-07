@@ -25,7 +25,7 @@ let AddLetter = ({ dispatch }) => {
           }}
         />
         <button className="guess" type="submit">
-          Try
+         Guess
         </button>
       </form>
     </div>
