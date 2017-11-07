@@ -22,19 +22,19 @@ export class Hangman extends PureComponent {
         </header>
 
         <main>
-          { this.props.letter[1] > 1 && this.props.letter[0] !== "You Won!!!!" ?
+          { this.props.letter[1] > 1 && this.props.letter[0] !== "Winner winner" ?
             <img className="man1" alt="hangman" src={Man1} /> : null }
-          { this.props.letter[1] > 2 && this.props.letter[0] !== "You Won!!!!" ?
+          { this.props.letter[1] > 2 && this.props.letter[0] !== "Winner winner" ?
             <img className="man2" alt="hangman" src={Man2} /> : null }
-          { this.props.letter[1] > 3 && this.props.letter[0] !== "You Won!!!!" ?
+          { this.props.letter[1] > 3 && this.props.letter[0] !== "Winner winner" ?
             <img className="man3" alt="hangman" src={Man3} /> : null }
-          { this.props.letter[1] > 4 && this.props.letter[0] !== "You Won!!!!" ?
+          { this.props.letter[1] > 4 && this.props.letter[0] !== "Winner winner" ?
             <img className="man4 "alt="hangman" src={Man4} /> : null }
           { this.props.letter[1] > 5 ?
             <img className="man" alt="hangman" src={Man} /> : null }
           <h1 className="word">{ this.props.letter[0] }</h1>
           <StartButton />
-          {this.props.letter[0] === "You Won!!!!" &&
+          {this.props.letter[0] === "Winner winner" &&
               <button className="newgame" onClick={reFresh}>
                 New Game
               </button>

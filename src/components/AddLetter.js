@@ -10,8 +10,8 @@ let AddLetter = ({ dispatch }) => {
   return (
     <div>
       <form
-        onSubmit={e => {
-          e.preventDefault()
+        onSubmit={i => {
+          i.preventDefault()
           if (!input.value.trim()) {
             return
           }
@@ -25,7 +25,7 @@ let AddLetter = ({ dispatch }) => {
           }}
         />
         <button className="guess" type="submit">
-          Guess
+          Try
         </button>
       </form>
     </div>
