@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import Title from './Title'
 import StartButton from './StartButton'
-import './Hangman.css'
+import './Game.css'
 import { connect } from 'react-redux'
 import HangMan from '../images/HangMan.png'
 import HangMan1 from '../images/HangMan1.png'
@@ -15,6 +15,7 @@ export class Hangman extends PureComponent {
 
   render() {
 
+    // fix this
     // function imageExists(image_url){
     //   var http = new XMLHttpRequest();
     //   http.open('HEAD', image_url, false);

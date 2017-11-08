@@ -19,11 +19,15 @@ let AddLetter = ({ dispatch }) => {
           input.value = ''
         }}
         >
+
+
         <input
           ref={node => {
             input = node
           }}
         />
+
+        
         <button className="guess" type="submit">
          Guess
         </button>
